@@ -1,0 +1,10 @@
+/Users/saleslopes/Projects/WebApiWithMongo/bin/Debug/netcoreapp1.1/WebApiWithMongo.db
+/Users/saleslopes/Projects/WebApiWithMongo/bin/Debug/netcoreapp1.1/WebApiWithMongo.deps.json
+/Users/saleslopes/Projects/WebApiWithMongo/bin/Debug/netcoreapp1.1/WebApiWithMongo.runtimeconfig.json
+/Users/saleslopes/Projects/WebApiWithMongo/bin/Debug/netcoreapp1.1/WebApiWithMongo.runtimeconfig.dev.json
+/Users/saleslopes/Projects/WebApiWithMongo/bin/Debug/netcoreapp1.1/WebApiWithMongo.dll
+/Users/saleslopes/Projects/WebApiWithMongo/bin/Debug/netcoreapp1.1/WebApiWithMongo.pdb
+/Users/saleslopes/Projects/WebApiWithMongo/obj/Debug/netcoreapp1.1/UserSecretsAssemblyInfo.cs
+/Users/saleslopes/Projects/WebApiWithMongo/obj/Debug/netcoreapp1.1/WebApiWithMongo.AssemblyInfo.cs
+/Users/saleslopes/Projects/WebApiWithMongo/obj/Debug/netcoreapp1.1/WebApiWithMongo.dll
+/Users/saleslopes/Projects/WebApiWithMongo/obj/Debug/netcoreapp1.1/WebApiWithMongo.pdb
