@@ -2,6 +2,49 @@
   "version": 2,
   "targets": {
     ".NETCoreApp,Version=v1.1": {
+      "AutoMapper/6.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.3.0",
+          "System.Collections": "4.3.0",
+          "System.Collections.Concurrent": "4.3.0",
+          "System.Collections.Specialized": "4.3.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Linq.Expressions": "4.3.0",
+          "System.Linq.Queryable": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0",
+          "System.Threading": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/AutoMapper.dll": {}
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "AutoMapper": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
+          "Microsoft.Extensions.DependencyModel": "1.1.1"
+        },
+        "compile": {
+          "lib/netstandard1.6/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.6/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        }
+      },
       "Libuv/1.9.1": {
         "type": "package",
         "dependencies": {
@@ -1662,6 +1705,15 @@
         },
         "runtime": {
           "lib/netstandard1.5/Microsoft.VisualStudio.Web.BrowserLink.dll": {}
+        }
+      },
+      "Microsoft.VisualStudio.Web.CodeGeneration.Tools/2.0.0-preview2-final": {
+        "type": "package",
+        "build": {
+          "build/netstandard1.0/microsoft.visualstudio.web.codegeneration.tools.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/microsoft.visualstudio.web.codegeneration.tools.targets": {}
         }
       },
       "Microsoft.Win32.Primitives/4.3.0": {
@@ -3993,6 +4045,33 @@
     }
   },
   "libraries": {
+    "AutoMapper/6.1.1": {
+      "sha512": "A+6PAblvzmkXPS20nFBQJvlNSW5oEdyfN5+cxT/Du35fTNyuP5pNDXT64KT/jBgxt7CPduOM0Y7oLnNe0E5IXg==",
+      "type": "package",
+      "path": "automapper/6.1.1",
+      "files": [
+        "automapper.6.1.1.nupkg.sha512",
+        "automapper.nuspec",
+        "lib/net45/AutoMapper.dll",
+        "lib/net45/AutoMapper.xml",
+        "lib/netstandard1.1/AutoMapper.dll",
+        "lib/netstandard1.1/AutoMapper.xml",
+        "lib/netstandard1.3/AutoMapper.dll",
+        "lib/netstandard1.3/AutoMapper.xml"
+      ]
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/2.0.1": {
+      "sha512": "YOMI/TncM6gBqXQm3SiHIhhe4TDcAHjnMFZJmqNBdR82BvTrx605KV8I/Pdmuz7GIgGJjnu8YJzyPrMMlZY4JQ==",
+      "type": "package",
+      "path": "automapper.extensions.microsoft.dependencyinjection/2.0.1",
+      "files": [
+        "automapper.extensions.microsoft.dependencyinjection.2.0.1.nupkg.sha512",
+        "automapper.extensions.microsoft.dependencyinjection.nuspec",
+        "lib/net451/AutoMapper.Extensions.Microsoft.DependencyInjection.dll",
+        "lib/netstandard1.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll",
+        "lib/netstandard1.6/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
+      ]
+    },
     "Libuv/1.9.1": {
       "sha512": "uqX2Frwf9PW8MaY7PRNY6HM5BpW1D8oj1EdqzrmbEFD5nH63Yat3aEjN/tws6Tw6Fk7LwmLBvtUh32tTeTaHiA==",
       "type": "package",
@@ -5415,6 +5494,22 @@
         "lib/netstandard1.5/Microsoft.VisualStudio.Web.BrowserLink.xml",
         "microsoft.visualstudio.web.browserlink.1.1.2.nupkg.sha512",
         "microsoft.visualstudio.web.browserlink.nuspec"
+      ]
+    },
+    "Microsoft.VisualStudio.Web.CodeGeneration.Tools/2.0.0-preview2-final": {
+      "sha512": "r8MI64oqW3lIsQ9Kf1TVbLSnOPWtXyqsROaT8agciRxPglyrDk9W81OFwrokpcmgN+tS/6tZv0Ah9IPq+G7cvQ==",
+      "type": "package",
+      "path": "microsoft.visualstudio.web.codegeneration.tools/2.0.0-preview2-final",
+      "files": [
+        "build/netstandard1.0/microsoft.visualstudio.web.codegeneration.tools.targets",
+        "buildMultiTargeting/microsoft.visualstudio.web.codegeneration.tools.targets",
+        "lib/netcoreapp2.0/dotnet-aspnet-codegenerator.dll",
+        "lib/netcoreapp2.0/dotnet-aspnet-codegenerator.runtimeconfig.json",
+        "microsoft.visualstudio.web.codegeneration.tools.2.0.0-preview2-final.nupkg.sha512",
+        "microsoft.visualstudio.web.codegeneration.tools.nuspec",
+        "prefercliruntime",
+        "toolassets/net461/Microsoft.VisualStudio.Web.CodeGeneration.Msbuild.dll",
+        "toolassets/netcoreapp2.0/Microsoft.VisualStudio.Web.CodeGeneration.Msbuild.dll"
       ]
     },
     "Microsoft.Win32.Primitives/4.3.0": {
@@ -10465,6 +10560,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v1.1": [
+      "AutoMapper >= 6.1.1",
+      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 2.0.1",
       "Microsoft.AspNetCore >= 1.1.2",
       "Microsoft.AspNetCore.Authentication.Cookies >= 1.1.2",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 1.1.2",
@@ -10479,7 +10576,8 @@
       "Microsoft.Extensions.Configuration.UserSecrets >= 1.1.2",
       "Microsoft.Extensions.Logging.Debug >= 1.1.2",
       "Microsoft.NETCore.App >= 1.1.2",
-      "Microsoft.VisualStudio.Web.BrowserLink >= 1.1.2"
+      "Microsoft.VisualStudio.Web.BrowserLink >= 1.1.2",
+      "Microsoft.VisualStudio.Web.CodeGeneration.Tools >= 2.0.0-preview2-final"
     ]
   },
   "packageFolders": {
@@ -10488,16 +10586,16 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/saleslopes/Projects/WebApiWithMongo/WebApiWithMongo.csproj",
+      "projectUniqueName": "/Users/saleslopes/Projects/WebApiWithMongo/WebApiIdentityMongo/WebApiWithMongo.csproj",
       "projectName": "WebApiWithMongo",
-      "projectPath": "/Users/saleslopes/Projects/WebApiWithMongo/WebApiWithMongo.csproj",
-      "outputPath": "/Users/saleslopes/Projects/WebApiWithMongo/obj/",
+      "projectPath": "/Users/saleslopes/Projects/WebApiWithMongo/WebApiIdentityMongo/WebApiWithMongo.csproj",
+      "outputPath": "/Users/saleslopes/Projects/WebApiWithMongo/WebApiIdentityMongo/obj/",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
       "files": {
-        "lib/netcoreapp1.1/WebApiWithMongo.dll": "/Users/saleslopes/Projects/WebApiWithMongo/bin/placeholder/netcoreapp1.1/WebApiWithMongo.dll"
+        "lib/netcoreapp1.1/WebApiWithMongo.dll": "/Users/saleslopes/Projects/WebApiWithMongo/WebApiIdentityMongo/bin/placeholder/netcoreapp1.1/WebApiWithMongo.dll"
       },
       "frameworks": {
         "netcoreapp1.1": {
@@ -10570,6 +10668,18 @@
           "Microsoft.AspNetCore.Identity.MongoDB": {
             "target": "Package",
             "version": "1.0.2"
+          },
+          "AutoMapper": {
+            "target": "Package",
+            "version": "6.1.1"
+          },
+          "Microsoft.VisualStudio.Web.CodeGeneration.Tools": {
+            "target": "Package",
+            "version": "2.0.0-preview2-final"
+          },
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+            "target": "Package",
+            "version": "2.0.1"
           }
         }
       }

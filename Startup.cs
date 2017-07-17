@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity.MongoDB; 
@@ -9,12 +10,15 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using WebApiWithMongo.Models;
-using WebApiWithMongo.Services;
+using WebApiWithMongo.Repository;
+using WebApiWithMongo.Service;
 
 namespace WebApiWithMongo
 {
     public class Startup
     {
+        private MapperConfiguration _mapperConfiguration { get; set; }
+
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
@@ -30,6 +34,11 @@ namespace WebApiWithMongo
 
             builder.AddEnvironmentVariables();
             Configuration = builder.Build();
+
+            _mapperConfiguration = new MapperConfiguration(cfg =>
+                {
+                    cfg.AddProfile(new MappingProfile());
+                });
         }
 
         public IConfigurationRoot Configuration { get; }
@@ -41,10 +50,19 @@ namespace WebApiWithMongo
             services.AddIdentityWithMongoStoresUsingCustomTypes<ApplicationUser, IdentityRole>(Configuration.GetConnectionString("DefaultConnection"));
 
             services.AddMvc();
+            services.AddAutoMapper(typeof(Startup));
+
+            services.AddSingleton<IMapper>(sp => _mapperConfiguration.CreateMapper());
+            services.AddSingleton<WebApiWithMongoContext>();
+
+            var ConnectionStrings = Configuration.GetSection("ConnectionStrings");
+            services.Configure<ConnectionStrings>(ConnectionStrings);
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductService, ProductService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

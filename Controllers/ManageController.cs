@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using WebApiWithMongo.Models;
 using WebApiWithMongo.Models.ManageViewModels;
-using WebApiWithMongo.Services;
+using WebApiWithMongo.Service;
  
 namespace WebApiWithMongo.Controllers
 {

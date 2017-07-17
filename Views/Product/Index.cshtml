@@ -1,0 +1,40 @@
+@model IEnumerable<ProductViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<section>
+    <article>
+        <form action="./Product" method="POST">
+            <span>Name </span><input type="text" name="name"><br>
+            <span>Brand </span> <input type="text" name="brand"><br>
+            <span>Price </span> <input type="number" name="price"><br>
+            <input type="submit" value="Create"><br>
+        </form>
+    </article>
+</section>
+<section>
+    <table cellspacing="5" cellpadding="5" border="1">
+        <thead>
+            <th>@Html.DisplayNameFor(model => model.name)</th>
+            <th>@Html.DisplayNameFor(model => model.brand)</th>
+            <th>@Html.DisplayNameFor(model => model.categories)</th>
+            <th>@Html.DisplayNameFor(model => model.price)</th>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.brand)</td>
+                    <td>
+                        @foreach(var cat in item.categories)
+                        {
+                            <span>@Html.DisplayFor(c => cat.name)</span><br>
+                        }
+                    </td>
+                    <td>@Html.DisplayFor(modelItem => item.price)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</section>

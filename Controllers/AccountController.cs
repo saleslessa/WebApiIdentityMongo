@@ -11,7 +11,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using WebApiWithMongo.Models;
 using WebApiWithMongo.Models.AccountViewModels;
-using WebApiWithMongo.Services;
+using WebApiWithMongo.Service;
 
 namespace WebApiWithMongo.Controllers
 {

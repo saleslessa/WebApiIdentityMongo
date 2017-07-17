@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebApiWithMongo.Services
+namespace WebApiWithMongo.Service
 {
     public interface IEmailSender
     {
